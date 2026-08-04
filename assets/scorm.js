@@ -25,7 +25,7 @@
   var pageId = metaTitleId ? metaTitleId.getAttribute('content') : '';
 
   // All activity IDs in this ADT (embedded at generation time)
-  var ALL_ACTIVITY_IDS = ["qz001","qz002","qz003","qz004","qz005","qz006","qz007","qz008","qz009","qz010","qz011","qz012","qz013","qz014","qz015","qz016","qz017","qz018","qz019","qz020","qz021","qz022","qz023","qz024","qz025","qz026","qz027","qz028","qz029","qz030","qz031","qz032","qz033","qz034","qz035"];
+  var ALL_ACTIVITY_IDS = [];
   var hasActivities = ALL_ACTIVITY_IDS.length > 0;
 
   // --- Record where the learner is ---
