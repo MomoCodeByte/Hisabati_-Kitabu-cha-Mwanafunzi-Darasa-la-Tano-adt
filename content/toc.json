@@ -1,0 +1,919 @@
+[
+  {
+    "section_id": "pg001_sec001",
+    "href": "index.html",
+    "title": "Hisabati",
+    "chapter_id": "pg001_n0002",
+    "level": 1
+  },
+  {
+    "section_id": "pg004_sec001",
+    "href": "pg004_sec001.html",
+    "title": "Shukurani",
+    "chapter_id": "pg004_n0002",
+    "level": 1
+  },
+  {
+    "section_id": "pg005_sec001",
+    "href": "pg005_sec001.html",
+    "title": "Utangulizi",
+    "chapter_id": "pg005_n0002",
+    "level": 1
+  },
+  {
+    "section_id": "pg007_sec001",
+    "href": "pg007_sec001.html",
+    "title": "Sura ya Kwanza",
+    "chapter_id": "pg007_n0002",
+    "level": 1
+  },
+  {
+    "section_id": "pg008_sec001",
+    "href": "pg008_sec001.html",
+    "title": "Mfano wa kwanza",
+    "chapter_id": "pg008_n0017",
+    "level": 2
+  },
+  {
+    "section_id": "pg009_sec001",
+    "href": "pg009_sec001.html",
+    "title": "Mfano wa pili",
+    "chapter_id": "pg009_n0009",
+    "level": 2
+  },
+  {
+    "section_id": "pg010_sec001",
+    "href": "pg010_sec001.html",
+    "title": "Mfano wa tatu",
+    "chapter_id": "pg010_n0011",
+    "level": 2
+  },
+  {
+    "section_id": "pg011_sec001",
+    "href": "pg011_sec001.html",
+    "title": "Mfano wa nne",
+    "chapter_id": "pg011_n0010",
+    "level": 2
+  },
+  {
+    "section_id": "pg012_sec001",
+    "href": "pg012_sec001.html",
+    "title": "Zoezi la kwanza",
+    "chapter_id": "pg011_n0018",
+    "level": 2
+  },
+  {
+    "section_id": "pg013_sec001",
+    "href": "pg013_sec001.html",
+    "title": "Vipimo vya uzani",
+    "chapter_id": "pg013_n0002",
+    "level": 2
+  },
+  {
+    "section_id": "pg015_sec001",
+    "href": "pg015_sec001.html",
+    "title": "Mfano wa tatu",
+    "chapter_id": "pg015_n0018",
+    "level": 3
+  },
+  {
+    "section_id": "pg016_sec001",
+    "href": "pg016_sec001.html",
+    "title": "Zoezi la pili",
+    "chapter_id": "pg016_n0003",
+    "level": 3
+  },
+  {
+    "section_id": "pg017_sec001",
+    "href": "pg017_sec001.html",
+    "title": "Vipimo vya ujazo",
+    "chapter_id": "pg017_n0006",
+    "level": 2
+  },
+  {
+    "section_id": "pg018_sec001",
+    "href": "pg018_sec001.html",
+    "title": "Mfano wa pili",
+    "chapter_id": "pg018_n0018",
+    "level": 3
+  },
+  {
+    "section_id": "pg019_sec001",
+    "href": "pg019_sec001.html",
+    "title": "Mfano wa tatu",
+    "chapter_id": "pg019_n0003",
+    "level": 3
+  },
+  {
+    "section_id": "pg020_sec001",
+    "href": "pg020_sec001.html",
+    "title": "Kugawanya vipimo vya metriki",
+    "chapter_id": "pg020_n0014",
+    "level": 2
+  },
+  {
+    "section_id": "pg021_sec001",
+    "href": "pg021_sec001.html",
+    "title": "Hatua",
+    "chapter_id": "pg021_n0008",
+    "level": 3
+  },
+  {
+    "section_id": "pg022_sec001",
+    "href": "pg022_sec001.html",
+    "title": "Mfano wa tatu",
+    "chapter_id": "pg022_n0002",
+    "level": 3
+  },
+  {
+    "section_id": "pg023_sec001",
+    "href": "pg023_sec001.html",
+    "title": "Mfano wa tano",
+    "chapter_id": "pg023_n0002",
+    "level": 3
+  },
+  {
+    "section_id": "pg025_sec001",
+    "href": "pg025_sec001.html",
+    "title": "Kazi ya kufanya ya nne",
+    "chapter_id": "pg025_n0015",
+    "level": 3
+  },
+  {
+    "section_id": "pg026_sec001",
+    "href": "pg026_sec001.html",
+    "title": "Zoezi la marudio",
+    "chapter_id": "pg026_n0002",
+    "level": 3
+  },
+  {
+    "section_id": "pg029_sec001",
+    "href": "pg029_sec001.html",
+    "title": "Sura ya Pili",
+    "chapter_id": "pg029_n0002",
+    "level": 1
+  },
+  {
+    "section_id": "pg031_sec001",
+    "href": "pg031_sec001.html",
+    "title": "Mzingo wa duara",
+    "chapter_id": "pg031_n0005",
+    "level": 2
+  },
+  {
+    "section_id": "pg032_sec001",
+    "href": "pg032_sec001.html",
+    "title": "Kazi ya kufanya ya pili",
+    "chapter_id": "pg032_n0003",
+    "level": 3
+  },
+  {
+    "section_id": "pg033_sec001",
+    "href": "pg033_sec001.html",
+    "title": "Mfano wa kwanza",
+    "chapter_id": "pg032_n0018",
+    "level": 3
+  },
+  {
+    "section_id": "pg034_sec001",
+    "href": "pg034_sec001.html",
+    "title": "Mfano wa tatu",
+    "chapter_id": "pg034_n0003",
+    "level": 3
+  },
+  {
+    "section_id": "pg035_sec001",
+    "href": "pg035_sec001.html",
+    "title": "Zoezi la kwanza",
+    "chapter_id": "pg035_n0003",
+    "level": 3
+  },
+  {
+    "section_id": "pg036_sec001",
+    "href": "pg036_sec001.html",
+    "title": "Eneo la duara",
+    "chapter_id": "pg036_n0021",
+    "level": 2
+  },
+  {
+    "section_id": "pg038_sec001",
+    "href": "pg038_sec001.html",
+    "title": "Mfano wa kwanza",
+    "chapter_id": "pg038_n0025",
+    "level": 3
+  },
+  {
+    "section_id": "pg039_sec001",
+    "href": "pg039_sec001.html",
+    "title": "Mfano wa pili",
+    "chapter_id": "pg039_n0002",
+    "level": 3
+  },
+  {
+    "section_id": "pg040_sec001",
+    "href": "pg040_sec001.html",
+    "title": "Zoezi la pili",
+    "chapter_id": "pg040_n0002",
+    "level": 3
+  },
+  {
+    "section_id": "pg041_sec001",
+    "href": "pg041_sec001.html",
+    "title": "Kazi ya kufanya ya nne",
+    "chapter_id": "pg041_n0009",
+    "level": 3
+  },
+  {
+    "section_id": "pg043_sec001",
+    "href": "pg043_sec001.html",
+    "title": "Sura ya Tatu",
+    "chapter_id": "pg043_n0002",
+    "level": 1
+  },
+  {
+    "section_id": "pg044_sec001",
+    "href": "pg044_sec001.html",
+    "title": "Kazi ya kufanya ya kwanza",
+    "chapter_id": "pg044_n0002",
+    "level": 2
+  },
+  {
+    "section_id": "pg045_sec001",
+    "href": "pg045_sec001.html",
+    "title": "Zoezi la kwanza",
+    "chapter_id": "pg045_n0003",
+    "level": 2
+  },
+  {
+    "section_id": "pg046_sec001",
+    "href": "pg046_sec001.html",
+    "title": "Kazi ya kufanya ya pili",
+    "chapter_id": "pg046_n0002",
+    "level": 2
+  },
+  {
+    "section_id": "pg047_sec001",
+    "href": "pg047_sec001.html",
+    "title": "Zoezi la pili",
+    "chapter_id": "pg047_n0003",
+    "level": 2
+  },
+  {
+    "section_id": "pg048_sec001",
+    "href": "pg048_sec001.html",
+    "title": "Mfano wa kwanza",
+    "chapter_id": "pg048_n0016",
+    "level": 2
+  },
+  {
+    "section_id": "pg049_sec001",
+    "href": "pg049_sec001.html",
+    "title": "Mfano wa tatu",
+    "chapter_id": "pg049_n0007",
+    "level": 2
+  },
+  {
+    "section_id": "pg050_sec001",
+    "href": "pg050_sec001.html",
+    "title": "Mfano wa kwanza",
+    "chapter_id": "pg050_n0003",
+    "level": 2
+  },
+  {
+    "section_id": "pg051_sec001",
+    "href": "pg051_sec001.html",
+    "title": "Mfano wa tatu",
+    "chapter_id": "pg051_n0003",
+    "level": 2
+  },
+  {
+    "section_id": "pg052_sec001",
+    "href": "pg052_sec001.html",
+    "title": "Kazi ya kufanya ya nne",
+    "chapter_id": "pg052_n0003",
+    "level": 2
+  },
+  {
+    "section_id": "pg053_sec001",
+    "href": "pg053_sec001.html",
+    "title": "Mfano wa pili",
+    "chapter_id": "pg053_n0002",
+    "level": 2
+  },
+  {
+    "section_id": "pg054_sec001",
+    "href": "pg054_sec001.html",
+    "title": "Kigawo Kikubwa cha Shirika (KKS)",
+    "chapter_id": "pg054_n0002",
+    "level": 2
+  },
+  {
+    "section_id": "pg055_sec001",
+    "href": "pg055_sec001.html",
+    "title": "Mfano wa tatu",
+    "chapter_id": "pg055_n0002",
+    "level": 3
+  },
+  {
+    "section_id": "pg056_sec001",
+    "href": "pg056_sec001.html",
+    "title": "Zoezi la sita",
+    "chapter_id": "pg056_n0003",
+    "level": 3
+  },
+  {
+    "section_id": "pg057_sec001",
+    "href": "pg057_sec001.html",
+    "title": "Mfano wa kwanza",
+    "chapter_id": "pg057_n0003",
+    "level": 3
+  },
+  {
+    "section_id": "pg058_sec001",
+    "href": "pg058_sec001.html",
+    "title": "Mfano wa tatu",
+    "chapter_id": "pg058_n0002",
+    "level": 3
+  },
+  {
+    "section_id": "pg059_sec001",
+    "href": "pg059_sec001.html",
+    "title": "Kigawe Kidogo cha Shirika (KDS)",
+    "chapter_id": "pg059_n0002",
+    "level": 2
+  },
+  {
+    "section_id": "pg060_sec001",
+    "href": "pg060_sec001.html",
+    "title": "Mfano wa tatu",
+    "chapter_id": "pg060_n0003",
+    "level": 3
+  },
+  {
+    "section_id": "pg061_sec001",
+    "href": "pg061_sec001.html",
+    "title": "Zoezi la nane",
+    "chapter_id": "pg061_n0002",
+    "level": 3
+  },
+  {
+    "section_id": "pg062_sec001",
+    "href": "pg062_sec001.html",
+    "title": "Zoezi la marudio",
+    "chapter_id": "pg062_n0007",
+    "level": 3
+  },
+  {
+    "section_id": "pg064_sec001",
+    "href": "pg064_sec001.html",
+    "title": "Sura ya Nne",
+    "chapter_id": "pg064_n0002",
+    "level": 1
+  },
+  {
+    "section_id": "pg065_sec001",
+    "href": "pg065_sec001.html",
+    "title": "Kazi ya kufanya ya kwanza",
+    "chapter_id": "pg065_n0021",
+    "level": 2
+  },
+  {
+    "section_id": "pg066_sec001",
+    "href": "pg066_sec001.html",
+    "title": "Mfano wa kwanza",
+    "chapter_id": "pg066_n0003",
+    "level": 2
+  },
+  {
+    "section_id": "pg067_sec001",
+    "href": "pg067_sec001.html",
+    "title": "Mfano wa tatu",
+    "chapter_id": "pg067_n0002",
+    "level": 2
+  },
+  {
+    "section_id": "pg068_sec001",
+    "href": "pg068_sec001.html",
+    "title": "Kutoa sehemu zenye asili tofauti",
+    "chapter_id": "pg068_n0001",
+    "level": 2
+  },
+  {
+    "section_id": "pg069_sec001",
+    "href": "pg069_sec001.html",
+    "title": "Mfano wa kwanza",
+    "chapter_id": "pg069_n0029",
+    "level": 3
+  },
+  {
+    "section_id": "pg070_sec001",
+    "href": "pg070_sec001.html",
+    "title": "Mfano wa pili",
+    "chapter_id": "pg070_n0009",
+    "level": 3
+  },
+  {
+    "section_id": "pg071_sec001",
+    "href": "pg071_sec001.html",
+    "title": "Mfano wa tatu",
+    "chapter_id": "pg071_n0003",
+    "level": 3
+  },
+  {
+    "section_id": "pg072_sec001",
+    "href": "pg072_sec001.html",
+    "title": "Kujumlisha namba mchanganyiko",
+    "chapter_id": "pg072_n0011",
+    "level": 2
+  },
+  {
+    "section_id": "pg073_sec001",
+    "href": "pg073_sec001.html",
+    "title": "Jumlisha sehemu zenye asili sawa",
+    "chapter_id": "pg073_n0007",
+    "level": 3
+  },
+  {
+    "section_id": "pg074_sec001",
+    "href": "pg074_sec001.html",
+    "title": "Mfano wa pili",
+    "chapter_id": "pg074_n0003",
+    "level": 3
+  },
+  {
+    "section_id": "pg075_sec001",
+    "href": "pg075_sec001.html",
+    "title": "Mfano wa tatu",
+    "chapter_id": "pg075_n0002",
+    "level": 3
+  },
+  {
+    "section_id": "pg076_sec001",
+    "href": "pg076_sec001.html",
+    "title": "Kutoa namba mchanganyiko",
+    "chapter_id": "pg076_n0002",
+    "level": 2
+  },
+  {
+    "section_id": "pg077_sec001",
+    "href": "pg077_sec001.html",
+    "title": "Mfano wa pili",
+    "chapter_id": "pg077_n0003",
+    "level": 3
+  },
+  {
+    "section_id": "pg078_sec001",
+    "href": "pg078_sec001.html",
+    "title": "Mfano wa tatu",
+    "chapter_id": "pg078_n0008",
+    "level": 3
+  },
+  {
+    "section_id": "pg079_sec001",
+    "href": "pg079_sec001.html",
+    "title": "Zoezi la nne",
+    "chapter_id": "pg079_n0002",
+    "level": 3
+  },
+  {
+    "section_id": "pg080_sec001",
+    "href": "pg080_sec001.html",
+    "title": "Zoezi la marudio",
+    "chapter_id": "pg080_n0005",
+    "level": 3
+  },
+  {
+    "section_id": "pg081_sec001",
+    "href": "pg081_sec001.html",
+    "title": "Sura ya Tano",
+    "chapter_id": "pg081_n0002",
+    "level": 1
+  },
+  {
+    "section_id": "pg082_sec001",
+    "href": "pg082_sec001.html",
+    "title": "Kuzidisha namba zenye desimali kwa desimali",
+    "chapter_id": "pg082_n0003",
+    "level": 2
+  },
+  {
+    "section_id": "pg083_sec001",
+    "href": "pg083_sec001.html",
+    "title": "Kuzidisha desimali zenye nafasi mbili kwa desimali zenye nafasi moja",
+    "chapter_id": "pg083_n0002",
+    "level": 3
+  },
+  {
+    "section_id": "pg084_sec001",
+    "href": "pg084_sec001.html",
+    "title": "Zoezi la kwanza",
+    "chapter_id": "pg084_n0002",
+    "level": 3
+  },
+  {
+    "section_id": "pg085_sec001",
+    "href": "pg085_sec001.html",
+    "title": "Mfano wa tatu",
+    "chapter_id": "pg085_n0002",
+    "level": 3
+  },
+  {
+    "section_id": "pg086_sec001",
+    "href": "pg086_sec001.html",
+    "title": "Zoezi la pili",
+    "chapter_id": "pg086_n0002",
+    "level": 3
+  },
+  {
+    "section_id": "pg087_sec001",
+    "href": "pg087_sec001.html",
+    "title": "Mfano wa kwanza",
+    "chapter_id": "pg087_n0003",
+    "level": 3
+  },
+  {
+    "section_id": "pg088_sec001",
+    "href": "pg088_sec001.html",
+    "title": "Njia",
+    "chapter_id": "pg088_n0002",
+    "level": 3
+  },
+  {
+    "section_id": "pg089_sec001",
+    "href": "pg089_sec001.html",
+    "title": "Zoezi la tatu",
+    "chapter_id": "pg089_n0008",
+    "level": 3
+  },
+  {
+    "section_id": "pg089_sec001",
+    "href": "pg089_sec001.html",
+    "title": "Kugawanya namba nzima kwa desimali",
+    "chapter_id": "pg089_n0043",
+    "level": 2
+  },
+  {
+    "section_id": "pg090_sec001",
+    "href": "pg090_sec001.html",
+    "title": "Mfano wa pili",
+    "chapter_id": "pg090_n0002",
+    "level": 3
+  },
+  {
+    "section_id": "pg091_sec001",
+    "href": "pg091_sec001.html",
+    "title": "Kugawanya desimali kwa desimali",
+    "chapter_id": "pg091_n0002",
+    "level": 2
+  },
+  {
+    "section_id": "pg092_sec001",
+    "href": "pg092_sec001.html",
+    "title": "Zoezi la tano",
+    "chapter_id": "pg092_n0002",
+    "level": 3
+  },
+  {
+    "section_id": "pg093_sec001",
+    "href": "pg093_sec001.html",
+    "title": "Mfano wa pili",
+    "chapter_id": "pg093_n0012",
+    "level": 3
+  },
+  {
+    "section_id": "pg094_sec001",
+    "href": "pg094_sec001.html",
+    "title": "(b) 10.06",
+    "chapter_id": "pg094_n0002",
+    "level": 3
+  },
+  {
+    "section_id": "pg095_sec001",
+    "href": "pg095_sec001.html",
+    "title": "Kubadili sehemu kuwa desimali",
+    "chapter_id": "pg095_n0002",
+    "level": 2
+  },
+  {
+    "section_id": "pg096_sec001",
+    "href": "pg096_sec001.html",
+    "title": "Mfano wa pili",
+    "chapter_id": "pg096_n0002",
+    "level": 3
+  },
+  {
+    "section_id": "pg097_sec001",
+    "href": "pg097_sec001.html",
+    "title": "Mfano wa tatu",
+    "chapter_id": "pg097_n0002",
+    "level": 3
+  },
+  {
+    "section_id": "pg098_sec001",
+    "href": "pg098_sec001.html",
+    "title": "Mfano wa nne",
+    "chapter_id": "pg098_n0004",
+    "level": 3
+  },
+  {
+    "section_id": "pg099_sec001",
+    "href": "pg099_sec001.html",
+    "title": "Zoezi la saba",
+    "chapter_id": "pg099_n0002",
+    "level": 3
+  },
+  {
+    "section_id": "pg100_sec001",
+    "href": "pg100_sec001.html",
+    "title": "Zoezi la nane",
+    "chapter_id": "pg100_n0005",
+    "level": 3
+  },
+  {
+    "section_id": "pg101_sec001",
+    "href": "pg101_sec001.html",
+    "title": "Mfano wa pili",
+    "chapter_id": "pg101_n0002",
+    "level": 3
+  },
+  {
+    "section_id": "pg102_sec001",
+    "href": "pg102_sec001.html",
+    "title": "Kazi ya kufanya ya pili",
+    "chapter_id": "pg102_n0012",
+    "level": 3
+  },
+  {
+    "section_id": "pg103_sec001",
+    "href": "pg103_sec001.html",
+    "title": "Zoezi la marudio",
+    "chapter_id": "pg103_n0002",
+    "level": 3
+  },
+  {
+    "section_id": "pg104_sec001",
+    "href": "pg104_sec001.html",
+    "title": "Sura ya Sita",
+    "chapter_id": "pg104_n0002",
+    "level": 1
+  },
+  {
+    "section_id": "pg105_sec001",
+    "href": "pg105_sec001.html",
+    "title": "Mfano wa kwanza",
+    "chapter_id": "pg105_n0018",
+    "level": 2
+  },
+  {
+    "section_id": "pg106_sec001",
+    "href": "pg106_sec001.html",
+    "title": "Mfano wa pili",
+    "chapter_id": "pg106_n0002",
+    "level": 2
+  },
+  {
+    "section_id": "pg106_sec001",
+    "href": "pg106_sec001.html",
+    "title": "Zoezi la kwanza",
+    "chapter_id": "pg106_n0013",
+    "level": 2
+  },
+  {
+    "section_id": "pg107_sec001",
+    "href": "pg107_sec001.html",
+    "title": "Mfano wa kwanza",
+    "chapter_id": "pg107_n0002",
+    "level": 2
+  },
+  {
+    "section_id": "pg108_sec001",
+    "href": "pg108_sec001.html",
+    "title": "Mfano wa nne",
+    "chapter_id": "pg108_n0002",
+    "level": 2
+  },
+  {
+    "section_id": "pg109_sec001",
+    "href": "pg109_sec001.html",
+    "title": "Zoezi la pili",
+    "chapter_id": "pg109_n0002",
+    "level": 2
+  },
+  {
+    "section_id": "pg110_sec001",
+    "href": "pg110_sec001.html",
+    "title": "Mfano wa pili",
+    "chapter_id": "pg110_n0003",
+    "level": 2
+  },
+  {
+    "section_id": "pg111_sec001",
+    "href": "pg111_sec001.html",
+    "title": "Kugawanya mitajo",
+    "chapter_id": "pg111_n0011",
+    "level": 2
+  },
+  {
+    "section_id": "pg112_sec001",
+    "href": "pg112_sec001.html",
+    "title": "Milinganyo",
+    "chapter_id": "pg112_n0035",
+    "level": 2
+  },
+  {
+    "section_id": "pg113_sec001",
+    "href": "pg113_sec001.html",
+    "title": "Kazi ya kufanya ya kwanza",
+    "chapter_id": "pg113_n0006",
+    "level": 3
+  },
+  {
+    "section_id": "pg114_sec001",
+    "href": "pg114_sec001.html",
+    "title": "Mfano wa kwanza",
+    "chapter_id": "pg114_n0003",
+    "level": 3
+  },
+  {
+    "section_id": "pg115_sec001",
+    "href": "pg115_sec001.html",
+    "title": "Zoezi la tano",
+    "chapter_id": "pg115_n0002",
+    "level": 3
+  },
+  {
+    "section_id": "pg116_sec001",
+    "href": "pg116_sec001.html",
+    "title": "Mfano wa pili",
+    "chapter_id": "pg116_n0002",
+    "level": 3
+  },
+  {
+    "section_id": "pg117_sec001",
+    "href": "pg117_sec001.html",
+    "title": "Mfano wa nne",
+    "chapter_id": "pg117_n0018",
+    "level": 3
+  },
+  {
+    "section_id": "pg118_sec001",
+    "href": "pg118_sec001.html",
+    "title": "Zoezi la sita",
+    "chapter_id": "pg118_n0020",
+    "level": 3
+  },
+  {
+    "section_id": "pg119_sec001",
+    "href": "pg119_sec001.html",
+    "title": "Kutoa milinganyo sahili",
+    "chapter_id": "pg119_n0037",
+    "level": 2
+  },
+  {
+    "section_id": "pg120_sec001",
+    "href": "pg120_sec001.html",
+    "title": "Mfano wa pili",
+    "chapter_id": "pg120_n0002",
+    "level": 3
+  },
+  {
+    "section_id": "pg121_sec001",
+    "href": "pg121_sec001.html",
+    "title": "Zoezi la saba",
+    "chapter_id": "pg121_n0003",
+    "level": 3
+  },
+  {
+    "section_id": "pg122_sec001",
+    "href": "pg122_sec001.html",
+    "title": "Mfano wa kwanza",
+    "chapter_id": "pg122_n0002",
+    "level": 3
+  },
+  {
+    "section_id": "pg123_sec001",
+    "href": "pg123_sec001.html",
+    "title": "Zoezi la nane",
+    "chapter_id": "pg123_n0007",
+    "level": 3
+  },
+  {
+    "section_id": "pg124_sec001",
+    "href": "pg124_sec001.html",
+    "title": "Kugawanya milinganyo sahili",
+    "chapter_id": "pg124_n0007",
+    "level": 2
+  },
+  {
+    "section_id": "pg125_sec001",
+    "href": "pg125_sec001.html",
+    "title": "Mfano wa pili",
+    "chapter_id": "pg125_n0002",
+    "level": 3
+  },
+  {
+    "section_id": "pg126_sec001",
+    "href": "pg126_sec001.html",
+    "title": "Kukokotoa milinganyo sahili yenye mitajo kila upande",
+    "chapter_id": "pg126_n0002",
+    "level": 2
+  },
+  {
+    "section_id": "pg127_sec001",
+    "href": "pg127_sec001.html",
+    "title": "Zoezi la kumi",
+    "chapter_id": "pg127_n0008",
+    "level": 3
+  },
+  {
+    "section_id": "pg128_sec001",
+    "href": "pg128_sec001.html",
+    "title": "Jikumbushe",
+    "chapter_id": "pg128_n0002",
+    "level": 3
+  },
+  {
+    "section_id": "pg129_sec001",
+    "href": "pg129_sec001.html",
+    "title": "Zoezi la marudio",
+    "chapter_id": "pg129_n0002",
+    "level": 3
+  },
+  {
+    "section_id": "pg130_sec001",
+    "href": "pg130_sec001.html",
+    "title": "Sura ya Saba",
+    "chapter_id": "pg130_n0002",
+    "level": 1
+  },
+  {
+    "section_id": "pg131_sec001",
+    "href": "pg131_sec001.html",
+    "title": "Mafumbo yenye dhana ya mauzo na manunuzi",
+    "chapter_id": "pg131_n0002",
+    "level": 2
+  },
+  {
+    "section_id": "pg132_sec001",
+    "href": "pg132_sec001.html",
+    "title": "Njia",
+    "chapter_id": "pg132_n0002",
+    "level": 3
+  },
+  {
+    "section_id": "pg133_sec001",
+    "href": "pg133_sec001.html",
+    "title": "Mfano wa nne",
+    "chapter_id": "pg133_n0015",
+    "level": 3
+  },
+  {
+    "section_id": "pg134_sec001",
+    "href": "pg134_sec001.html",
+    "title": "Mfano wa tano",
+    "chapter_id": "pg134_n0008",
+    "level": 3
+  },
+  {
+    "section_id": "pg135_sec001",
+    "href": "pg135_sec001.html",
+    "title": "Zoezi la kwanza",
+    "chapter_id": "pg135_n0003",
+    "level": 3
+  },
+  {
+    "section_id": "pg136_sec001",
+    "href": "pg136_sec001.html",
+    "title": "Ankara",
+    "chapter_id": "pg136_n0023",
+    "level": 2
+  },
+  {
+    "section_id": "pg137_sec001",
+    "href": "pg137_sec001.html",
+    "title": "Mfano wa kwanza",
+    "chapter_id": "pg137_n0006",
+    "level": 3
+  },
+  {
+    "section_id": "pg138_sec001",
+    "href": "pg138_sec001.html",
+    "title": "Mfano wa pili",
+    "chapter_id": "pg138_n0002",
+    "level": 3
+  },
+  {
+    "section_id": "pg139_sec001",
+    "href": "pg139_sec001.html",
+    "title": "Zoezi la pili",
+    "chapter_id": "pg139_n0003",
+    "level": 3
+  },
+  {
+    "section_id": "pg142_sec001",
+    "href": "pg142_sec001.html",
+    "title": "Kazi ya kufanya",
+    "chapter_id": "pg142_n0002",
+    "level": 3
+  }
+]

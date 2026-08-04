@@ -1,0 +1,10 @@
+{
+  "name": "hisabati-darasa-la-tano-adt",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Hisabati Kitabu cha Mwanafunzi Darasa la Tano - accessible static HTML edition",
+  "scripts": {
+    "dev": "node server.mjs",
+    "preview": "node server.mjs"
+  }
+}
