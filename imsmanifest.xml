@@ -1,23 +1,163 @@
 <?xml version='1.0' encoding='utf-8'?>
-<manifest xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2" xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" identifier="ADT_HISABATI_DRS_5_PB_2025__15_OCTOBER_" version="1.0" xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd                        http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd">
-
-  <metadata>
-    <schema>ADL SCORM</schema>
-    <schemaversion>1.2</schemaversion>
-  </metadata>
-
-  <organizations default="ADT_ORG">
-    <organization identifier="ADT_ORG">
-      <title>Hisabati: Kitabu cha Mwanafunzi Darasa la Tano</title>
-      <item identifier="ITEM_1" identifierref="RESOURCE_1">
-        <title>Hisabati: Kitabu cha Mwanafunzi Darasa la Tano</title>
-      </item>
-    </organization>
-  </organizations>
-
-  <resources>
-    <resource identifier="RESOURCE_1" type="webcontent" adlcp:scormtype="sco" href="index.html">
-      <file href="index.html" /><file href="pg002_sec001.html" /><file href="pg003_sec001.html" /><file href="pg004_sec001.html" /><file href="pg005_sec001.html" /><file href="pg006_sec001.html" /><file href="pg007_sec001.html" /><file href="pg008_sec001.html" /><file href="pg009_sec001.html" /><file href="qz001.html" /><file href="pg010_sec001.html" /><file href="pg011_sec001.html" /><file href="pg012_sec001.html" /><file href="pg013_sec001.html" /><file href="qz002.html" /><file href="pg014_sec001.html" /><file href="pg015_sec001.html" /><file href="pg016_sec001.html" /><file href="pg017_sec001.html" /><file href="qz003.html" /><file href="pg018_sec001.html" /><file href="pg019_sec001.html" /><file href="pg020_sec001.html" /><file href="qz004.html" /><file href="pg021_sec001.html" /><file href="pg022_sec001.html" /><file href="pg023_sec001.html" /><file href="qz005.html" /><file href="pg024_sec001.html" /><file href="pg025_sec001.html" /><file href="pg026_sec001.html" /><file href="pg027_sec001.html" /><file href="pg028_sec001.html" /><file href="pg029_sec001.html" /><file href="pg030_sec001.html" /><file href="pg031_sec001.html" /><file href="qz006.html" /><file href="pg032_sec001.html" /><file href="pg033_sec001.html" /><file href="pg034_sec001.html" /><file href="pg035_sec001.html" /><file href="pg036_sec001.html" /><file href="pg037_sec001.html" /><file href="pg038_sec001.html" /><file href="qz007.html" /><file href="pg039_sec001.html" /><file href="pg040_sec001.html" /><file href="pg041_sec001.html" /><file href="pg042_sec001.html" /><file href="pg043_sec001.html" /><file href="qz008.html" /><file href="pg044_sec001.html" /><file href="pg045_sec001.html" /><file href="pg046_sec001.html" /><file href="pg047_sec001.html" /><file href="pg048_sec001.html" /><file href="qz009.html" /><file href="pg049_sec001.html" /><file href="pg050_sec001.html" /><file href="pg051_sec001.html" /><file href="qz010.html" /><file href="pg052_sec001.html" /><file href="pg053_sec001.html" /><file href="pg054_sec001.html" /><file href="qz011.html" /><file href="pg055_sec001.html" /><file href="pg056_sec001.html" /><file href="pg057_sec001.html" /><file href="pg058_sec001.html" /><file href="qz012.html" /><file href="pg059_sec001.html" /><file href="pg060_sec001.html" /><file href="pg061_sec001.html" /><file href="qz013.html" /><file href="pg062_sec001.html" /><file href="pg063_sec001.html" /><file href="pg064_sec001.html" /><file href="pg065_sec001.html" /><file href="pg066_sec001.html" /><file href="qz014.html" /><file href="pg067_sec001.html" /><file href="pg068_sec001.html" /><file href="pg069_sec001.html" /><file href="qz015.html" /><file href="pg070_sec001.html" /><file href="pg071_sec001.html" /><file href="pg072_sec001.html" /><file href="pg073_sec001.html" /><file href="qz016.html" /><file href="pg074_sec001.html" /><file href="pg075_sec001.html" /><file href="pg076_sec001.html" /><file href="qz017.html" /><file href="pg077_sec001.html" /><file href="pg078_sec001.html" /><file href="pg079_sec001.html" /><file href="qz018.html" /><file href="pg080_sec001.html" /><file href="pg081_sec001.html" /><file href="pg082_sec001.html" /><file href="pg083_sec001.html" /><file href="pg084_sec001.html" /><file href="qz019.html" /><file href="pg085_sec001.html" /><file href="pg086_sec001.html" /><file href="pg087_sec001.html" /><file href="pg088_sec001.html" /><file href="qz020.html" /><file href="pg089_sec001.html" /><file href="pg090_sec001.html" /><file href="pg091_sec001.html" /><file href="qz021.html" /><file href="pg092_sec001.html" /><file href="pg093_sec001.html" /><file href="pg094_sec001.html" /><file href="qz022.html" /><file href="pg095_sec001.html" /><file href="pg096_sec001.html" /><file href="pg097_sec001.html" /><file href="qz023.html" /><file href="pg098_sec001.html" /><file href="pg099_sec001.html" /><file href="pg100_sec001.html" /><file href="pg101_sec001.html" /><file href="qz024.html" /><file href="pg102_sec001.html" /><file href="pg103_sec001.html" /><file href="pg104_sec001.html" /><file href="qz025.html" /><file href="pg105_sec001.html" /><file href="pg106_sec001.html" /><file href="pg107_sec001.html" /><file href="qz026.html" /><file href="pg108_sec001.html" /><file href="pg109_sec001.html" /><file href="pg110_sec001.html" /><file href="qz027.html" /><file href="pg111_sec001.html" /><file href="pg112_sec001.html" /><file href="pg113_sec001.html" /><file href="pg114_sec001.html" /><file href="qz028.html" /><file href="pg115_sec001.html" /><file href="pg116_sec001.html" /><file href="pg117_sec001.html" /><file href="qz029.html" /><file href="pg118_sec001.html" /><file href="pg119_sec001.html" /><file href="pg120_sec001.html" /><file href="pg121_sec001.html" /><file href="pg122_sec001.html" /><file href="qz030.html" /><file href="pg123_sec001.html" /><file href="pg124_sec001.html" /><file href="pg125_sec001.html" /><file href="qz031.html" /><file href="pg126_sec001.html" /><file href="pg127_sec001.html" /><file href="pg128_sec001.html" /><file href="qz032.html" /><file href="pg129_sec001.html" /><file href="pg130_sec001.html" /><file href="pg131_sec001.html" /><file href="pg132_sec001.html" /><file href="qz033.html" /><file href="pg133_sec001.html" /><file href="pg134_sec001.html" /><file href="pg135_sec001.html" /><file href="pg136_sec001.html" /><file href="pg137_sec001.html" /><file href="qz034.html" /><file href="pg138_sec001.html" /><file href="pg139_sec001.html" /><file href="pg140_sec001.html" /><file href="pg141_sec001.html" /><file href="pg142_sec001.html" /><file href="qz035.html" /><file href="pg143_sec001.html" /><file href="pg144_sec001.html" /></resource>
-  </resources>
-
-</manifest>
+<ns0:manifest xmlns:ns0="http://www.imsproject.org/xsd/imscp_rootv1p1p2" xmlns:ns2="http://www.adlnet.org/xsd/adlcp_rootv1p2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" identifier="ADT_HISABATI_DRS_5_PB_2025__15_OCTOBER_" version="1.0" xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd                        http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd">
+  <ns0:metadata>
+    <ns0:schema>ADL SCORM</ns0:schema>
+    <ns0:schemaversion>1.2</ns0:schemaversion>
+  </ns0:metadata>
+  <ns0:organizations default="ADT_ORG">
+    <ns0:organization identifier="ADT_ORG">
+      <ns0:title>Hisabati: Kitabu cha Mwanafunzi Darasa la Tano</ns0:title>
+      <ns0:item identifier="ITEM_1" identifierref="RESOURCE_1">
+        <ns0:title>Hisabati: Kitabu cha Mwanafunzi Darasa la Tano</ns0:title>
+      </ns0:item>
+    </ns0:organization>
+  </ns0:organizations>
+  <ns0:resources>
+    <ns0:resource identifier="RESOURCE_1" type="webcontent" ns2:scormtype="sco" href="index.html">
+      <ns0:file href="index.html" />
+      <ns0:file href="pg002_sec001.html" />
+      <ns0:file href="pg003_sec001.html" />
+      <ns0:file href="pg004_sec001.html" />
+      <ns0:file href="pg005_sec001.html" />
+      <ns0:file href="pg006_sec001.html" />
+      <ns0:file href="pg007_sec001.html" />
+      <ns0:file href="pg008_sec001.html" />
+      <ns0:file href="pg009_sec001.html" />
+      <ns0:file href="pg010_sec001.html" />
+      <ns0:file href="pg011_sec001.html" />
+      <ns0:file href="pg012_sec001.html" />
+      <ns0:file href="pg013_sec001.html" />
+      <ns0:file href="pg014_sec001.html" />
+      <ns0:file href="pg015_sec001.html" />
+      <ns0:file href="pg016_sec001.html" />
+      <ns0:file href="pg017_sec001.html" />
+      <ns0:file href="pg018_sec001.html" />
+      <ns0:file href="pg019_sec001.html" />
+      <ns0:file href="pg020_sec001.html" />
+      <ns0:file href="pg021_sec001.html" />
+      <ns0:file href="pg022_sec001.html" />
+      <ns0:file href="pg023_sec001.html" />
+      <ns0:file href="pg024_sec001.html" />
+      <ns0:file href="pg025_sec001.html" />
+      <ns0:file href="pg026_sec001.html" />
+      <ns0:file href="pg027_sec001.html" />
+      <ns0:file href="pg028_sec001.html" />
+      <ns0:file href="pg029_sec001.html" />
+      <ns0:file href="pg030_sec001.html" />
+      <ns0:file href="pg031_sec001.html" />
+      <ns0:file href="pg032_sec001.html" />
+      <ns0:file href="pg033_sec001.html" />
+      <ns0:file href="pg034_sec001.html" />
+      <ns0:file href="pg035_sec001.html" />
+      <ns0:file href="pg036_sec001.html" />
+      <ns0:file href="pg037_sec001.html" />
+      <ns0:file href="pg038_sec001.html" />
+      <ns0:file href="pg039_sec001.html" />
+      <ns0:file href="pg040_sec001.html" />
+      <ns0:file href="pg041_sec001.html" />
+      <ns0:file href="pg042_sec001.html" />
+      <ns0:file href="pg043_sec001.html" />
+      <ns0:file href="pg044_sec001.html" />
+      <ns0:file href="pg045_sec001.html" />
+      <ns0:file href="pg046_sec001.html" />
+      <ns0:file href="pg047_sec001.html" />
+      <ns0:file href="pg048_sec001.html" />
+      <ns0:file href="pg049_sec001.html" />
+      <ns0:file href="pg050_sec001.html" />
+      <ns0:file href="pg051_sec001.html" />
+      <ns0:file href="pg052_sec001.html" />
+      <ns0:file href="pg053_sec001.html" />
+      <ns0:file href="pg054_sec001.html" />
+      <ns0:file href="pg055_sec001.html" />
+      <ns0:file href="pg056_sec001.html" />
+      <ns0:file href="pg057_sec001.html" />
+      <ns0:file href="pg058_sec001.html" />
+      <ns0:file href="pg059_sec001.html" />
+      <ns0:file href="pg060_sec001.html" />
+      <ns0:file href="pg061_sec001.html" />
+      <ns0:file href="pg062_sec001.html" />
+      <ns0:file href="pg063_sec001.html" />
+      <ns0:file href="pg064_sec001.html" />
+      <ns0:file href="pg065_sec001.html" />
+      <ns0:file href="pg066_sec001.html" />
+      <ns0:file href="pg067_sec001.html" />
+      <ns0:file href="pg068_sec001.html" />
+      <ns0:file href="pg069_sec001.html" />
+      <ns0:file href="pg070_sec001.html" />
+      <ns0:file href="pg071_sec001.html" />
+      <ns0:file href="pg072_sec001.html" />
+      <ns0:file href="pg073_sec001.html" />
+      <ns0:file href="pg074_sec001.html" />
+      <ns0:file href="pg075_sec001.html" />
+      <ns0:file href="pg076_sec001.html" />
+      <ns0:file href="pg077_sec001.html" />
+      <ns0:file href="pg078_sec001.html" />
+      <ns0:file href="pg079_sec001.html" />
+      <ns0:file href="pg080_sec001.html" />
+      <ns0:file href="pg081_sec001.html" />
+      <ns0:file href="pg082_sec001.html" />
+      <ns0:file href="pg083_sec001.html" />
+      <ns0:file href="pg084_sec001.html" />
+      <ns0:file href="pg085_sec001.html" />
+      <ns0:file href="pg086_sec001.html" />
+      <ns0:file href="pg087_sec001.html" />
+      <ns0:file href="pg088_sec001.html" />
+      <ns0:file href="pg089_sec001.html" />
+      <ns0:file href="pg090_sec001.html" />
+      <ns0:file href="pg091_sec001.html" />
+      <ns0:file href="pg092_sec001.html" />
+      <ns0:file href="pg093_sec001.html" />
+      <ns0:file href="pg094_sec001.html" />
+      <ns0:file href="pg095_sec001.html" />
+      <ns0:file href="pg096_sec001.html" />
+      <ns0:file href="pg097_sec001.html" />
+      <ns0:file href="pg098_sec001.html" />
+      <ns0:file href="pg099_sec001.html" />
+      <ns0:file href="pg100_sec001.html" />
+      <ns0:file href="pg101_sec001.html" />
+      <ns0:file href="pg102_sec001.html" />
+      <ns0:file href="pg103_sec001.html" />
+      <ns0:file href="pg104_sec001.html" />
+      <ns0:file href="pg105_sec001.html" />
+      <ns0:file href="pg106_sec001.html" />
+      <ns0:file href="pg107_sec001.html" />
+      <ns0:file href="pg108_sec001.html" />
+      <ns0:file href="pg109_sec001.html" />
+      <ns0:file href="pg110_sec001.html" />
+      <ns0:file href="pg111_sec001.html" />
+      <ns0:file href="pg112_sec001.html" />
+      <ns0:file href="pg113_sec001.html" />
+      <ns0:file href="pg114_sec001.html" />
+      <ns0:file href="pg115_sec001.html" />
+      <ns0:file href="pg116_sec001.html" />
+      <ns0:file href="pg117_sec001.html" />
+      <ns0:file href="pg118_sec001.html" />
+      <ns0:file href="pg119_sec001.html" />
+      <ns0:file href="pg120_sec001.html" />
+      <ns0:file href="pg121_sec001.html" />
+      <ns0:file href="pg122_sec001.html" />
+      <ns0:file href="pg123_sec001.html" />
+      <ns0:file href="pg124_sec001.html" />
+      <ns0:file href="pg125_sec001.html" />
+      <ns0:file href="pg126_sec001.html" />
+      <ns0:file href="pg127_sec001.html" />
+      <ns0:file href="pg128_sec001.html" />
+      <ns0:file href="pg129_sec001.html" />
+      <ns0:file href="pg130_sec001.html" />
+      <ns0:file href="pg131_sec001.html" />
+      <ns0:file href="pg132_sec001.html" />
+      <ns0:file href="pg133_sec001.html" />
+      <ns0:file href="pg134_sec001.html" />
+      <ns0:file href="pg135_sec001.html" />
+      <ns0:file href="pg136_sec001.html" />
+      <ns0:file href="pg137_sec001.html" />
+      <ns0:file href="pg138_sec001.html" />
+      <ns0:file href="pg139_sec001.html" />
+      <ns0:file href="pg140_sec001.html" />
+      <ns0:file href="pg141_sec001.html" />
+      <ns0:file href="pg142_sec001.html" />
+      <ns0:file href="pg143_sec001.html" />
+      <ns0:file href="pg144_sec001.html" />
+    </ns0:resource>
+  </ns0:resources>
+</ns0:manifest>
