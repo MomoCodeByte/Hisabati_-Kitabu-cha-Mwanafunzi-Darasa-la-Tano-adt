@@ -155,8 +155,12 @@
   }
 
   var observer = new MutationObserver(syncFromPlayer);
+  var observedRoots = [];
   Array.from(document.querySelectorAll('[data-id*="_rb"]')).forEach(function (container) {
-    observer.observe(container, {
+    var root = container.parentElement || container;
+    if (observedRoots.indexOf(root) >= 0) return;
+    observedRoots.push(root);
+    observer.observe(root, {
       subtree: true,
       childList: true,
       attributes: true,
