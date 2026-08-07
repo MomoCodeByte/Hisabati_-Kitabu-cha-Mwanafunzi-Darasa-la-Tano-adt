@@ -6,7 +6,10 @@
   var timecodes = null;
   var currentId = null;
   var currentCandidates = [];
+  var currentWords = [];
   var lastWordIndex = -1;
+  var activeWord = null;
+  var highlightOverlay = null;
   var clockStartedAt = 0;
   var clockElapsed = 0;
   var clockRunning = false;
@@ -22,6 +25,8 @@
   function clearHighlight() {
     if (activeElement) activeElement.classList.remove("adt-read-highlight");
     activeElement = null;
+    activeWord = null;
+    if (highlightOverlay) highlightOverlay.hidden = true;
     lastWordIndex = -1;
   }
 
@@ -31,6 +36,41 @@
     if (!element) return;
     element.classList.add("adt-read-highlight");
     activeElement = element;
+  }
+
+  function ensureOverlay() {
+    if (highlightOverlay) return highlightOverlay;
+    highlightOverlay = document.createElement("span");
+    highlightOverlay.id = "adt-read-word-highlight";
+    highlightOverlay.setAttribute("aria-hidden", "true");
+    highlightOverlay.hidden = true;
+    document.body.appendChild(highlightOverlay);
+    return highlightOverlay;
+  }
+
+  function positionActiveWord() {
+    if (!activeWord) return;
+    var rect = activeWord.range.getBoundingClientRect();
+    var overlay = ensureOverlay();
+    if (!rect.width || !rect.height) {
+      overlay.hidden = true;
+      return;
+    }
+    overlay.hidden = false;
+    overlay.style.left = rect.left + "px";
+    overlay.style.top = rect.top + "px";
+    overlay.style.width = rect.width + "px";
+    overlay.style.height = rect.height + "px";
+  }
+
+  function setWordHighlight(word) {
+    activeWord = word || null;
+    if (!activeWord) {
+      if (highlightOverlay) highlightOverlay.hidden = true;
+      return;
+    }
+    ensureOverlay().dataset.word = activeWord.text;
+    positionActiveWord();
   }
 
   function filename(url) {
@@ -62,9 +102,29 @@
     }).filter(function (item) { return item.score > 0; });
     if (!scored.length) return [];
     var best = scored.reduce(function (a, b) { return b.score > a.score ? b : a; });
-    return scored.filter(function (item) {
-      return item.score >= 1000 || Math.abs(item.index - best.index) <= 4;
-    }).sort(function (a, b) { return a.index - b.index; });
+    var exact = scored.filter(function (item) { return item.score >= 1000; });
+    return (exact.length ? exact : scored.filter(function (item) {
+      return Math.abs(item.index - best.index) <= 4;
+    })).sort(function (a, b) { return a.index - b.index; });
+  }
+
+  function wordRangesFor(candidates) {
+    var words = [];
+    candidates.forEach(function (item) {
+      var walker = document.createTreeWalker(item.span, NodeFilter.SHOW_TEXT);
+      var node;
+      while ((node = walker.nextNode())) {
+        var matcher = /\S+/g;
+        var match;
+        while ((match = matcher.exec(node.nodeValue || ""))) {
+          var range = document.createRange();
+          range.setStart(node, match.index);
+          range.setEnd(node, match.index + match[0].length);
+          words.push({ range: range, text: normalise(match[0]) });
+        }
+      }
+    });
+    return words;
   }
 
   function timestampsFor(id) {
@@ -112,13 +172,22 @@
       return time >= Number(stamp.start) && time < Number(stamp.end);
     });
     if (wordIndex < 0) wordIndex = Math.max(0, stamps.findLastIndex(function (stamp) { return time >= Number(stamp.start); }));
-    if (wordIndex === lastWordIndex) return;
+    document.documentElement.setAttribute("data-adt-highlight-id", currentId);
+    document.documentElement.setAttribute("data-adt-highlight-time", time.toFixed(2));
+    document.documentElement.setAttribute("data-adt-highlight-word-index", String(wordIndex));
+    if (wordIndex === lastWordIndex) {
+      positionActiveWord();
+      return;
+    }
     lastWordIndex = wordIndex;
     var word = normalise(stamps[wordIndex] && stamps[wordIndex].text);
-    var match = currentCandidates.find(function (item) {
-      return word && item.text.split(" ").includes(word);
-    });
-    setHighlight((match || currentCandidates[0]).span);
+    var match = currentWords[wordIndex];
+    if (!match || (word && match.text !== word)) {
+      match = currentWords.find(function (item, index) {
+        return item.text === word && Math.abs(index - wordIndex) <= 5;
+      }) || match;
+    }
+    setWordHighlight(match);
   }
 
   function begin(media) {
@@ -128,6 +197,7 @@
       var file = filename(media.currentSrc || media.src);
       currentId = map[file] || null;
       currentCandidates = currentId ? visibleSpansFor(currentId) : [];
+      currentWords = wordRangesFor(currentCandidates);
       update(media);
     });
   }
@@ -139,35 +209,35 @@
   function clockTick() {
     if (!clockRunning) return;
     update({ paused: false, ended: false, currentTime: clockTime() });
-    animationFrame = window.requestAnimationFrame(clockTick);
+    animationFrame = window.setTimeout(clockTick, 40);
   }
 
   function startClock() {
     clockElapsed = 0;
     clockStartedAt = Date.now();
     clockRunning = true;
-    window.cancelAnimationFrame(animationFrame);
-    animationFrame = window.requestAnimationFrame(clockTick);
+    window.clearTimeout(animationFrame);
+    animationFrame = window.setTimeout(clockTick, 40);
   }
 
   function pauseClock() {
     if (!clockRunning) return;
     clockElapsed = clockTime();
     clockRunning = false;
-    window.cancelAnimationFrame(animationFrame);
+    window.clearTimeout(animationFrame);
   }
 
   function resumeClock() {
     if (clockRunning || !currentId) return;
     clockStartedAt = Date.now();
     clockRunning = true;
-    animationFrame = window.requestAnimationFrame(clockTick);
+    animationFrame = window.setTimeout(clockTick, 40);
   }
 
   function stopClock() {
     clockRunning = false;
     clockElapsed = 0;
-    window.cancelAnimationFrame(animationFrame);
+    window.clearTimeout(animationFrame);
     clearHighlight();
   }
 
@@ -179,9 +249,24 @@
       var id = resolveAudioId(file, values[0] || {});
       if (!id) return;
       currentId = id;
+      document.documentElement.setAttribute("data-adt-resolved-id", id);
       currentCandidates = visibleSpansFor(id);
+      currentWords = wordRangesFor(currentCandidates);
+      document.documentElement.setAttribute("data-adt-resolved-words", String(currentWords.length));
       document.documentElement.setAttribute("data-adt-highlight-audio", file);
-      startClock();
+      if (document.querySelector('button[aria-label="Sitisha"],button[aria-label="Pause"]')) {
+        startClock();
+      } else {
+        clockElapsed = 0;
+        clockRunning = false;
+        window.clearTimeout(animationFrame);
+        clearHighlight();
+        window.setTimeout(function () {
+          if (currentId === id && document.querySelector('button[aria-label="Sitisha"],button[aria-label="Pause"]')) {
+            startClock();
+          }
+        }, 150);
+      }
     });
   }
 
@@ -245,7 +330,10 @@
     var label = normalise(button.getAttribute("aria-label"));
     if (label === "sitisha" || label === "pause") pauseClock();
     else if (label === "simamisha" || label === "stop") stopClock();
-    else if (label.includes("endelea") || label === "cheza" || label === "play") resumeClock();
+    else if (label.includes("endelea") || label === "cheza" || label === "play") {
+      resumeClock();
+      window.setTimeout(resumeClock, 200);
+    }
   }, true);
 
   var controlsObserver = new MutationObserver(function () {
@@ -253,9 +341,17 @@
   });
   controlsObserver.observe(document.documentElement, { childList: true, subtree: true, attributes: true, attributeFilter: ["aria-label"] });
 
+  window.setInterval(function () {
+    var playing = !!document.querySelector('button[aria-label="Sitisha"],button[aria-label="Pause"]');
+    document.documentElement.setAttribute("data-adt-clock-state", playing + ":" + clockRunning + ":" + !!currentId);
+    if (playing && currentId && !clockRunning) resumeClock();
+    else if (!playing && clockRunning) pauseClock();
+    if (playing && currentId) update({ paused: false, ended: false, currentTime: clockTime() });
+  }, 100);
+
   var style = document.createElement("style");
   style.id = "adt-read-aloud-highlight-style";
-  style.textContent = ".pdf-text.adt-read-highlight{background:rgba(255,224,64,.64)!important;box-shadow:0 0 0 .18em rgba(255,224,64,.35);border-radius:.14em;transition:background-color .12s linear,box-shadow .12s linear}";
+  style.textContent = "#adt-read-word-highlight{position:fixed;z-index:40;pointer-events:none;background:rgba(168,85,247,.48);box-shadow:0 0 0 .12em rgba(126,34,206,.25);border-radius:.12em;transition:left .06s linear,top .06s linear,width .06s linear,height .06s linear}";
   document.head.appendChild(style);
 
   if (location.hostname === "127.0.0.1" || location.hostname === "localhost") {
@@ -264,8 +360,9 @@
         timecodes = loadedTimecodes || {};
         currentId = id;
         currentCandidates = visibleSpansFor(id);
+        currentWords = wordRangesFor(currentCandidates);
         update({ paused: false, ended: false, currentTime: Number(atTime) || 0 });
-        return activeElement ? activeElement.textContent : null;
+        return activeWord ? activeWord.text : null;
       });
     };
   }
