@@ -7,6 +7,10 @@
   var currentId = null;
   var currentCandidates = [];
   var lastWordIndex = -1;
+  var clockStartedAt = 0;
+  var clockElapsed = 0;
+  var clockRunning = false;
+  var animationFrame = 0;
 
   function normalise(value) {
     return String(value || "")
@@ -102,6 +106,59 @@
     });
   }
 
+  function clockTime() {
+    return clockElapsed + (clockRunning ? (Date.now() - clockStartedAt) / 1000 : 0);
+  }
+
+  function clockTick() {
+    if (!clockRunning) return;
+    update({ paused: false, ended: false, currentTime: clockTime() });
+    animationFrame = window.requestAnimationFrame(clockTick);
+  }
+
+  function startClock() {
+    clockElapsed = 0;
+    clockStartedAt = Date.now();
+    clockRunning = true;
+    window.cancelAnimationFrame(animationFrame);
+    animationFrame = window.requestAnimationFrame(clockTick);
+  }
+
+  function pauseClock() {
+    if (!clockRunning) return;
+    clockElapsed = clockTime();
+    clockRunning = false;
+    window.cancelAnimationFrame(animationFrame);
+  }
+
+  function resumeClock() {
+    if (clockRunning || !currentId) return;
+    clockStartedAt = Date.now();
+    clockRunning = true;
+    animationFrame = window.requestAnimationFrame(clockTick);
+  }
+
+  function stopClock() {
+    clockRunning = false;
+    clockElapsed = 0;
+    window.cancelAnimationFrame(animationFrame);
+    clearHighlight();
+  }
+
+  function beginFromUrl(url) {
+    var file = filename(url);
+    if (!/\.mp3$/i.test(file)) return;
+    Promise.all([audioByFile, Promise.resolve(timecodes)]).then(function (values) {
+      var id = (values[0] || {})[file];
+      if (!id) return;
+      timecodes = values[1] || {};
+      currentId = id;
+      currentCandidates = visibleSpansFor(id);
+      document.documentElement.setAttribute("data-adt-highlight-audio", file);
+      startClock();
+    });
+  }
+
   var audioMapPromise = fetch("./content/i18n/sw-TZ/audios.json")
     .then(function (response) { return response.json(); })
     .then(function (map) {
@@ -114,6 +171,28 @@
   timecodes = fetch("./content/i18n/sw-TZ/timecode/timecode_output.json")
     .then(function (response) { return response.json(); })
     .catch(function () { return {}; });
+
+  var originalFetch = window.fetch;
+  window.fetch = function (input) {
+    var requestUrl = typeof input === "string" ? input : input && input.url;
+    if (requestUrl) beginFromUrl(requestUrl);
+    return originalFetch.apply(this, arguments);
+  };
+
+  var originalOpen = XMLHttpRequest.prototype.open;
+  XMLHttpRequest.prototype.open = function (method, url) {
+    if (url) beginFromUrl(url);
+    return originalOpen.apply(this, arguments);
+  };
+
+  if (window.PerformanceObserver) {
+    try {
+      var resourceObserver = new PerformanceObserver(function (list) {
+        list.getEntries().forEach(function (entry) { beginFromUrl(entry.name); });
+      });
+      resourceObserver.observe({ type: "resource", buffered: true });
+    } catch (_) {}
+  }
 
   var originalPlay = HTMLMediaElement.prototype.play;
   HTMLMediaElement.prototype.play = function () {
@@ -133,6 +212,20 @@
   document.addEventListener("ended", function (event) {
     if (event.target instanceof HTMLAudioElement) clearHighlight();
   }, true);
+
+  document.addEventListener("click", function (event) {
+    var button = event.target && event.target.closest && event.target.closest("button[aria-label]");
+    if (!button) return;
+    var label = normalise(button.getAttribute("aria-label"));
+    if (label === "sitisha" || label === "pause") pauseClock();
+    else if (label === "simamisha" || label === "stop") stopClock();
+    else if (label.includes("endelea") || label === "cheza" || label === "play") resumeClock();
+  }, true);
+
+  var controlsObserver = new MutationObserver(function () {
+    if (document.querySelector('button[aria-label="Sitisha"],button[aria-label="Pause"]')) resumeClock();
+  });
+  controlsObserver.observe(document.documentElement, { childList: true, subtree: true, attributes: true, attributeFilter: ["aria-label"] });
 
   var style = document.createElement("style");
   style.id = "adt-read-aloud-highlight-style";
