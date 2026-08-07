@@ -4,13 +4,12 @@
   var overlay = null;
   var activeRange = null;
   var pageWords = null;
-  var sourceStarts = null;
+  var sourceMaps = null;
 
   function normalise(value) {
-    return String(value || "")
-      .toLocaleLowerCase("sw-TZ")
-      .replace(/[^\p{L}\p{N}]+/gu, "")
-      .trim();
+    var text = String(value || "").replace(/Ã—/g, "×").toLocaleLowerCase("sw-TZ").trim();
+    var word = text.replace(/[^\p{L}\p{N}]+/gu, "");
+    return word || text.replace(/[^×÷+=−.%]/gu, "");
   }
 
   function ensureOverlay() {
@@ -50,43 +49,62 @@
     });
   }
 
-  function bestSequenceStart(sourceWords, visibleWords, minimumStart) {
-    if (!sourceWords.length) return -1;
-    var bestStart = -1;
-    var bestScore = 0;
-    visibleWords.forEach(function (word, start) {
-      if (start < (minimumStart || 0)) return;
-      if (word.text !== sourceWords[0]) return;
-      var score = 0;
-      for (var i = 0; i < sourceWords.length && start + i < visibleWords.length; i += 1) {
-        if (visibleWords[start + i].text === sourceWords[i]) score += 1;
-        else break;
-      }
-      if (score > bestScore) {
-        bestScore = score;
-        bestStart = start;
-      }
+  function indexedSourceWords(container) {
+    var indexed = Array.from(container.querySelectorAll("[data-word-index]"));
+    if (indexed.length) {
+      return indexed.map(function (element) {
+        return {
+          index: Number(element.getAttribute("data-word-index")),
+          text: normalise(element.textContent)
+        };
+      });
+    }
+    return String(container.textContent || "").split(/\s+/).filter(Boolean).map(function (word, index) {
+      return { index: index, text: normalise(word) };
     });
-    return bestStart;
   }
 
-  function textWords(container) {
-    return String(container.textContent || "").split(/\s+/).map(normalise).filter(Boolean);
-  }
-
-  function buildSourceStarts() {
-    var starts = {};
-    var cursor = 0;
+  function buildSourceMaps() {
+    var entries = [];
+    var maps = {};
     Array.from(document.querySelectorAll('[data-id*="_rb"]')).forEach(function (container) {
-      var words = textWords(container);
-      var start = bestSequenceStart(words, pageWords, cursor);
-      if (start < 0) start = bestSequenceStart(words, pageWords, 0);
-      if (start >= 0) {
-        starts[container.getAttribute("data-id") || ""] = start;
-        cursor = start + words.length;
-      }
+      var sourceId = container.getAttribute("data-id") || "";
+      maps[sourceId] = {};
+      indexedSourceWords(container).forEach(function (word) {
+        entries.push({ sourceId: sourceId, index: word.index, text: word.text });
+      });
     });
-    return starts;
+
+    var rows = entries.length;
+    var columns = pageWords.length;
+    var table = Array.from({ length: rows + 1 }, function () {
+      return new Uint16Array(columns + 1);
+    });
+    for (var row = rows - 1; row >= 0; row -= 1) {
+      for (var column = columns - 1; column >= 0; column -= 1) {
+        if (entries[row].text && entries[row].text === pageWords[column].text) {
+          table[row][column] = table[row + 1][column + 1] + 1;
+        } else {
+          table[row][column] = Math.max(table[row + 1][column], table[row][column + 1]);
+        }
+      }
+    }
+
+    var sourceCursor = 0;
+    var pageCursor = 0;
+    while (sourceCursor < rows && pageCursor < columns) {
+      var source = entries[sourceCursor];
+      if (source.text && source.text === pageWords[pageCursor].text) {
+        maps[source.sourceId][source.index] = pageCursor;
+        sourceCursor += 1;
+        pageCursor += 1;
+      } else if (table[sourceCursor + 1][pageCursor] >= table[sourceCursor][pageCursor + 1]) {
+        sourceCursor += 1;
+      } else {
+        pageCursor += 1;
+      }
+    }
+    return maps;
   }
 
   function positionOverlay() {
@@ -119,13 +137,11 @@
     var index = Number(spoken.getAttribute("data-word-index"));
     if (!container || !Number.isFinite(index)) return;
     if (!pageWords) pageWords = collectPageWords();
-    if (!sourceStarts) sourceStarts = buildSourceStarts();
+    if (!sourceMaps) sourceMaps = buildSourceMaps();
     var sourceWords = nativeWords(container);
     var sourceId = container.getAttribute("data-id") || "";
-    var start = Object.prototype.hasOwnProperty.call(sourceStarts, sourceId)
-      ? sourceStarts[sourceId]
-      : bestSequenceStart(sourceWords, pageWords, 0);
-    var target = start >= 0 ? pageWords[start + index] : null;
+    var pageIndex = sourceMaps[sourceId] ? sourceMaps[sourceId][index] : undefined;
+    var target = Number.isFinite(pageIndex) ? pageWords[pageIndex] : null;
     if (!target || target.text !== sourceWords[index]) {
       hideOverlay();
       return;
