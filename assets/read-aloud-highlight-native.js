@@ -142,6 +142,7 @@
   Array.from(document.querySelectorAll('[data-id*="_rb"]')).forEach(function (container) {
     observer.observe(container, {
       subtree: true,
+      childList: true,
       attributes: true,
       attributeFilter: ["class"]
     });
