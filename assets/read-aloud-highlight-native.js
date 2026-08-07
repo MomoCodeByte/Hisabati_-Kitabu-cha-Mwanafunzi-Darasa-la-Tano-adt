@@ -139,11 +139,12 @@
   }
 
   var observer = new MutationObserver(syncFromPlayer);
-  observer.observe(document.documentElement, {
-    subtree: true,
-    childList: true,
-    attributes: true,
-    attributeFilter: ["class", "data-word-index"]
+  Array.from(document.querySelectorAll('[data-id*="_rb"]')).forEach(function (container) {
+    observer.observe(container, {
+      subtree: true,
+      attributes: true,
+      attributeFilter: ["class"]
+    });
   });
 
   window.addEventListener("resize", positionOverlay);
