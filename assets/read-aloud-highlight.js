@@ -77,6 +77,32 @@
     return [];
   }
 
+  function resolveAudioId(file, map) {
+    if (map[file] && timestampsFor(map[file]).length) return map[file];
+    var directId = file.replace(/\.mp3$/i, "");
+    var source = document.querySelector('[data-id="' + directId.replace(/"/g, '\\"') + '"]');
+    if (!source) return null;
+    if (timestampsFor(directId).length) return directId;
+    var sourceText = normalise(source.textContent);
+    if (!sourceText) return null;
+    var sourceWords = new Set(sourceText.split(" "));
+    var bestId = null;
+    var bestScore = 0;
+    Array.from(document.querySelectorAll("[data-id]")).forEach(function (element) {
+      var id = element.getAttribute("data-id");
+      if (!id || id === directId || !timestampsFor(id).length) return;
+      var text = normalise(element.textContent);
+      if (!text) return;
+      var overlap = text.split(" ").filter(function (word) { return sourceWords.has(word); }).length;
+      var score = (text === sourceText ? 10000 : (text.includes(sourceText) || sourceText.includes(text) ? 1000 : 0)) + overlap;
+      if (score > bestScore) {
+        bestScore = score;
+        bestId = id;
+      }
+    });
+    return bestId;
+  }
+
   function update(media) {
     if (!currentId || media.paused || media.ended) return;
     var stamps = timestampsFor(currentId);
@@ -149,9 +175,9 @@
     var file = filename(url);
     if (!/\.mp3$/i.test(file)) return;
     Promise.all([audioByFile, Promise.resolve(timecodes)]).then(function (values) {
-      var id = (values[0] || {})[file];
-      if (!id) return;
       timecodes = values[1] || {};
+      var id = resolveAudioId(file, values[0] || {});
+      if (!id) return;
       currentId = id;
       currentCandidates = visibleSpansFor(id);
       document.documentElement.setAttribute("data-adt-highlight-audio", file);
